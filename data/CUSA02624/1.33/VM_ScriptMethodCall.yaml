@@ -1,0 +1,17 @@
+{
+  "id": "VM_ScriptMethodCall",
+  "title_id": "CUSA02624",
+  "game": "Call of Duty - Black Ops III",
+  "version": "1.33",
+  "module": "eboot.bin",
+  "kind": "function",
+  "name": "VM ScriptMethodCall handler",
+  "rva": "0x774380",
+  "confidence": "decompiled",
+  "evidence": "SHA256-identified ELF profile. Raw normal dispatch table RVA 0x1582D70, alias 323, stores RVA 0x774380. Entry bytes match scoped IDA B74380. B74397..B743A2 checks receiver value type 1; B74410 writes child-thread type 0x14; B74450 pops receiver; B7445C..B7447A aligns and loads the function qword. Corroborates PS4 T7OP_Call receiver selection. No live invocation. IDA AOB attempt at the requested address found no unique signature within 80 bytes.",
+  "description": "Loader-resolved receiver method call handler. Requires an engine object receiver and resolved function operand; receiver ownership and call ABI matter.",
+  "tags": ["gsc", "vm", "imports", "methods"],
+  "added": "2026-10-11",
+  "by": "codex",
+  "source": "hash-checked-elf-and-scoped-ida"
+}

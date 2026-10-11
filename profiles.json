@@ -1,0 +1,8 @@
+{
+  "CUSA02624/1.33": {
+    "game": "Call of Duty - Black Ops III",
+    "module": "eboot.bin",
+    "sha256": "280c465354eab22136653083e2b533a1bdcf1988e2d407527ec9d2ef4537b616",
+    "executable_rva_ranges": [[0, 22151168]]
+  }
+}

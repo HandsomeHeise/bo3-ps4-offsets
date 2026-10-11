@@ -1,0 +1,18 @@
+{
+  "id": "VM_ScriptThreadCall",
+  "title_id": "CUSA02624",
+  "game": "Call of Duty - Black Ops III",
+  "version": "1.33",
+  "module": "eboot.bin",
+  "kind": "function",
+  "name": "VM ScriptThreadCall handler",
+  "rva": "0x7748B0",
+  "aob": "55 48 89 E5 41 57 41 56 41 55 41 54 53 50 41 89 FD 4C 8D 05",
+  "confidence": "decompiled",
+  "evidence": "SHA256-identified ELF profile. Raw normal dispatch table RVA 0x1582D70, alias 416, stores RVA 0x7748B0. Entry bytes match scoped IDA B748B0. B74933 writes root-thread type 0x11; B74973 reads argc, B74976..B7499A aligns and loads the function qword; B749A1 increments the instance thread counter. Corroborates PS4 T7OP_Call Threaded selection. IDA reported the entry AOB unique. No live invocation or cross-version signature validation in this analysis.",
+  "description": "Loader-resolved global thread call handler, distinct from ScriptThreadCallPointer and receiver threads.",
+  "tags": ["gsc", "vm", "imports", "threads"],
+  "added": "2026-10-11",
+  "by": "codex",
+  "source": "hash-checked-elf-and-scoped-ida"
+}

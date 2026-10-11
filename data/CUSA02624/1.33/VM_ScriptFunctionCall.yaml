@@ -1,0 +1,17 @@
+{
+  "id": "VM_ScriptFunctionCall",
+  "title_id": "CUSA02624",
+  "game": "Call of Duty - Black Ops III",
+  "version": "1.33",
+  "module": "eboot.bin",
+  "kind": "function",
+  "name": "VM ScriptFunctionCall handler",
+  "rva": "0x773C80",
+  "confidence": "decompiled",
+  "evidence": "SHA256-identified ELF profile. Raw normal dispatch table RVA 0x1582D70, alias 51, stores RVA 0x773C80. Entry bytes match scoped IDA listing at B73C80. B73D18 writes child-thread type 0x14; B73D55..B73D73 aligns and loads the resolved function qword into the frame code position. Corroborates PS4 T7OP_Call ScriptFunctionCall selection. No live invocation in this analysis. IDA signature attempt resolved to enclosing B73B00 instead of this entry and was rejected; short exact entry prefix has 16 matches.",
+  "description": "Loader-resolved ordinary function call handler. The imported aligned operand must already be resolved; this RVA is not a generic builtin entrypoint.",
+  "tags": ["gsc", "vm", "imports", "calls"],
+  "added": "2026-10-11",
+  "by": "codex",
+  "source": "hash-checked-elf-and-scoped-ida"
+}

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+local/
+*.bin
+*.elf
+*.self
+*.i64
+*.idb
+*.dmp
+*.dump
+.env
+.env.*
