@@ -14,6 +14,29 @@
   },
   "entries": [
     {
+      "id": "VM_CallBuiltinMethodDispatch",
+      "title_id": "CUSA02624",
+      "game": "Call of Duty - Black Ops III",
+      "version": "1.33",
+      "module": "eboot.bin",
+      "kind": "function",
+      "name": "VM builtin method dispatch wrapper",
+      "rva": "0x773960",
+      "confidence": "inferred",
+      "evidence": "SHA256-identified ELF profile. Raw normal dispatch alias227 stores RVA0x773960. Scoped IDA VA B73960..B73993 reads argc, aligns the operand to8, loads the handler qword and jumps to symbol-correlated VM_CallBuiltinMethod (debug anchor cod_Debug 0x39a400). First32 ELF code bytes at RVA+0x4000 are 488b0689fa488d0d2403ce024869d2388a0000440fb6004883c0084883e0f844. Symbol correlation supplies semantic inference, not live execution proof. Reference ps4bo3ops.db calls alias227 ScriptMethodCall, but its label disagrees with this body; alias323 is the script-frame method handler.",
+      "description": "Builtin method opcode dispatch wrapper, distinct from the loader-resolved script method handler. Requires a resolved native operand and correct receiver/call ABI. No callable native API guarantee.",
+      "tags": [
+        "gsc",
+        "vm",
+        "methods",
+        "builtin",
+        "reference-label-correction"
+      ],
+      "added": "2026-10-11",
+      "by": "codex",
+      "source": "hash-checked-elf-and-scoped-ida"
+    },
+    {
       "id": "VM_ScriptFunctionCall",
       "title_id": "CUSA02624",
       "game": "Call of Duty - Black Ops III",
